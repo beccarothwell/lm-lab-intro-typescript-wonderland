@@ -1,4 +1,5 @@
 import { endAdventure, haveAdventures } from "../..";
+import { breakfastTime } from "../chapter_7/chapter_7_extension";
 import { askQuestion, clear, print } from "../ui/console";
 
 // ⚠️ This is a very unusual type setup. It's not a great idea in the real world
@@ -35,8 +36,9 @@ export function wakeUp(): void {
     print(
       "✅ CONGRATULATIONS! You successfully made it through Wonderland! 🥳"
     );
+    print("...or did you❓❓❓");
 
-    return askQuestion("Press ENTER to re-enter Wonderland! ", haveAdventures);
+    return askQuestion("Press ENTER to continue!", breakfastTime);
   } else {
     print("You are unable to wake up! 😱");
     return endAdventure();

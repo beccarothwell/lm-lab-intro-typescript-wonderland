@@ -2,8 +2,8 @@ import { endAdventure } from "../..";
 import { playCroquet } from "../chapter_4/chapter_4_croquet";
 import { askQuestion, clear, print } from "../ui/console";
 
-const DRINKS = ["Coffee", "Tea", "Water", "Lemonade"] as const;
-type DrinkType = (typeof DRINKS)[number];
+export const DRINKS = ["Coffee", "Tea", "Water", "Lemonade"] as const;
+export type DrinkType = (typeof DRINKS)[number];
 
 type Drink = {
   type: DrinkType;
